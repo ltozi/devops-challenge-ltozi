@@ -88,7 +88,7 @@ terraform {
     key            = "tech-challenge/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
-    dynamodb_table = "terraform-locks"
+    use_lockfile    = "true"
   }
 }
 ```
@@ -159,7 +159,6 @@ Automatically runs on push/PR
 - ⚠️ Local state for Minikube environment (S3 recommended for production AWS)
 - ⚠️ Node Port not working locally on macos docker networking (Port forward required)
 - ⚠️ No horizontal pod autoscaling (HPA) configured yet
-- ⚠️ Monitoring not highly available (single replica)
 
 ### Production Enhancements
 - Add ECR repository for publishing the image on AWS
